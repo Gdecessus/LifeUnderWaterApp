@@ -8,7 +8,7 @@ import javax.swing.JFrame;
 
 /**
  *
- * @author CamaraAdmin
+ * @author Gus
  */
 public class PollutionGUI extends javax.swing.JFrame {
     private long startTime;
@@ -38,6 +38,7 @@ public class PollutionGUI extends javax.swing.JFrame {
         HomeBtn = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -83,6 +84,18 @@ public class PollutionGUI extends javax.swing.JFrame {
         getContentPane().add(jButton2);
         jButton2.setBounds(330, 10, 150, 30);
 
+        jButton3.setFont(new java.awt.Font("NSimSun", 1, 14)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(0, 0, 0));
+        jButton3.setText("Donate");
+        jButton3.setContentAreaFilled(false);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton3);
+        jButton3.setBounds(650, 15, 75, 23);
+
         jLabel3.setFont(new java.awt.Font("NSimSun", 1, 15)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("<html> Plastic pollution in numbers<br><br><br>  -8 million pieces of plastic pollution make their way into the ocean every day. (OSPAR, 2009)<br> -12 million tonnes of plastic is dumped into the ocean every year (Eunomia, 2016)<br> -80% of all studied marine debris is plastic. (IUCN, 2020)<br> -5.25 trillion macro and microplastics may now be floating in the open ocean, weighing up to 269,000 tonnes. (Eriksen, 2014)<br> -100,000 marine mammals and turtles and 1 million sea birds are killed by marine plastic pollution every year. (UK Government, 2018) </html>");
@@ -102,10 +115,9 @@ public class PollutionGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void HomeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeBtnActionPerformed
-        // TODO add your handling code here:
-        LifeUnderWaterGUI lifeUnderWaterGUI = new LifeUnderWaterGUI();
-        lifeUnderWaterGUI.setVisible(true);
-        dispose();
+    LifeUnderWaterGUI lifeUnderWaterGUI = new LifeUnderWaterGUI();
+    lifeUnderWaterGUI.setVisible(true);
+    dispose();
     }//GEN-LAST:event_HomeBtnActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -119,6 +131,12 @@ public class PollutionGUI extends javax.swing.JFrame {
     boolean isVisible = jLabel3.isVisible();
     jLabel3.setVisible(!isVisible);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    DonationGUI DonationGUI = new DonationGUI();
+    DonationGUI.setVisible(true);
+    dispose();
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -159,6 +177,7 @@ public class PollutionGUI extends javax.swing.JFrame {
     private javax.swing.JButton HomeBtn;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
