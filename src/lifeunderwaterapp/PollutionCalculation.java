@@ -9,7 +9,24 @@ package lifeunderwaterapp;
  * @author CamaraAdmin
  */
 public class PollutionCalculation {
-    public double calculatePollution(double minutes) {
-        return minutes * 22.83;
+
+    private double pollutionCalc;
+
+ 
+    public PollutionCalculation(double pollutionFactor) {
+        this.pollutionCalc = pollutionFactor;
     }
+
+    public double calculatePollution(double minutes) {
+        return minutes * this.pollutionCalc;
+    }
+
+    public void setPollutionFactor(double pollutionFactor) {
+        this.pollutionCalc = pollutionFactor;
+    }
+
+    public double getPollutionFactor() {
+        return this.pollutionCalc;
+    }
+
 }
